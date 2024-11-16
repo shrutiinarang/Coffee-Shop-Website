@@ -13,8 +13,10 @@ Features :
 8. Authentication: Login and signup functionality for users.
 
 Tech Stack :
+
 HTML5: Structure and layout of the website.
+
 CSS3: Styling, animations, and responsiveness.
+
 JavaScript: Interactive elements 
 
-Link of the website : 
