@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Page</title>
+<link rel="stylesheet" href="./../css/style.css"/>
+<style>
+   body{
+            width: 100%;
+            background-image: url(./../images/order_page_image\ .jpg) ;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: 100%;
+           
+           
+            margin: 0;
+            padding: 0;
+        }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #f05826bd;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-size: cover;
+        
+    }
+    h1 {
+        text-align: center  ; 
+       
+       
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #ff7200;
+        color: white;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+    <!-- header section start -->
+    <div class="main">
+        <div class="navbar">
+           <div class="icon">
+            <h2 class="logo">Golden<br><span>Coffee Shop</span></h2>
+            </div>
+             <div class="menu">
+                <ul>
+                    <li><a href="./../index.html">HOME</a></li>
+                    <li><a href="./../pages/about.html">ABOUT</a></li>
+                    <li><a href="./../pages/product.html">PRODUCT</a></li>
+                    <li><a href="./../pages/contact.html">CONTACT</a></li>
+                    <li><a href="./../pages/services.html">SERVICES</a></li>
+                    <li><a href="./../pages/review.html">REVIEW</a></li>
+                    <li><a href="./../pages/login.html">LOGIN</a></li>
+                    <img src="./img/hamburger-menu.png" class="hamburger-menu"/>
+                </ul> 
+            </div>
+            <div class="search">
+               <input class="srch" type="search" name="" placeholder="Search">
+                <a href="#"><button class="btn">Search</button></a>
+             </div>
+
+        </div>
+        <!-- headter section end -->
+<div class="container">
+    <h1>Order Your Coffee</h1>
+    <form action="order_processing_page.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"  placeholder="Enter Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"  placeholder="Enter Your Name" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"  placeholder="Enter Your Address" required>
+
+        <label for="mobile">Mobile No.:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}"   placeholder="Enter Your Mobile No "required>
+
+        <label for="coffee">Coffee Type:</label>
+        <select id="coffee" name="coffee" required>
+            <option value="NONE">NONE</option>
+            <option value="Hot Coffee">Hot Coffee</option>
+            <option value="Cappuccino">Cappuccinoe</option>
+            <option value="Fresh Cold Coffee">Fresh Cold Coffee</option>
+            <option value="ICED COFFEE">ICED COFFEE</option>
+            <option value="FRONZE COFFEE">FRONZE COFFEE</option>
+            <option value="VALINA COFFEE">VALINA COFFEE</option>
+            <option value="CHOCOLATE COFFEEo">CHOCOLATE COFFEE</option>
+            <option value="NTRO COFFEEo">NTRO COFFEE</option>
+            <option value="BLACK COFFEE">BLACK COFFEE</option>
+            <option value="FLAT WHITE COFFEE">FLAT WHITE COFFEE</option>
+            <option value="MOCHA COFFEE">MOCHA COFFEE</option>
+            <option value="SMOOTHIS COFFEE">SMOOTHIS COFFEE</option>
+            <option value="FRAPPUCCINO COFFEE">FRAPPUCCINO COFFEE</option>
+            <option value="CAPPUCCINO">CAPPUCCINO</option>
+            <option value="EXPRESSO">EXPRESSO</option>
+        
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" readonly>
+
+        <label for="payment">Payment Type:</label>
+        <select id="payment" name="payment" required>
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash">Cash on Delivery</option>
+        </select>
+
+        <input type="submit" value="Place Order"> 
+    </form>
+</div>
+<script>
+    // Calculate price based on coffee type and quantity
+    document.getElementById('coffee').addEventListener('change', function() {
+        calculatePrice();
+    });
+    document.getElementById('quantity').addEventListener('input', function() {
+        calculatePrice();
+    });
+
+    function calculatePrice() {
+        const coffeeType = document.getElementById('coffee').value;
+        const quantity = document.getElementById('quantity').value;
+        let price = 0;
+
+        // Calculate price based on coffee type
+        switch(coffeeType) {
+            case 'Hot Coffee':
+                price =  100;
+                break;
+            case 'Cappuccino':
+                price = 100;
+                break;
+            case 'Fresh Cold Coffee':
+                price = 100;
+                break;
+            case 'ICED COFFEE':
+                price =100;
+                break
+                case 'FRONZE COFFEE':
+                price = 90;
+                break;
+                case 'VALINA COFFEE':
+                price = 100;
+                break;
+                case 'CHOCOLATE COFFEE':
+                price = 150;
+                break;
+        
+                case 'NTRO COFFEE':
+                price = 110;
+                break;
+        
+                case 'BLACK COFFEE':
+                price = 100;
+                break;
+                case 'FLAT WHITE COFFEE':
+                price = 110;
+                break;
+                case 'MOCHA COFFEE':
+                price = 130;
+                break;
+                case 'SMOOTHIS COFFEE':
+                price = 100;
+                break;
+                case 'FRAPPUCCINO COFFEE':
+                price = 150;
+                break;
+                case 'CAPPUCCINO':
+                price = 150;
+                break;
+                case 'EXPRESSO':
+                price = 200;
+                break;
+        
+        
+        
+        }
+
+        // Calculate total price
+        price *= quantity;
+
+        // Update price input field
+        document.getElementById('price').value = price.toFixed(2);
+        
+    }
+</script>
+<div>
+    <footer class="footer">
+        <div class="sections-container">
+
+            <div class="footer-sections ">
+                <p class="section-title">Quick links:</p><br>
+                <div class="section-links">
+                    <h4><p><a href="About" class="about-links">About</a></p><br>
+                    <p><a href="Contact" class="about-links" >Contact</a></p><br>
+                    <p><a href="services" class="about-links">Services</a></p><br>
+                    <p><a href="Review" class="about-links">Review</a></p><br></h4>
+                </div> 
+            </div>
+    
+            <div class="footer-sections">
+                <p class="section-title">Supports:</p><br>
+                <div class="section-links">
+                    <h3><p>Payment</p><br>
+                    <p>Security</p><br>
+                    <p>FAQ</p><br>
+                    <p>Privacy Police</p><br></h3>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <p class="section-title">Social:</p><br>
+                <div class="section-links">
+                    <h3><p><p><i class="fa-brands fa-youtube"></i>  &nbsp; YouTube</p><br>
+                        <p><i class="fa-solid fa-envelope"></i> &nbsp; Mail Us</p><br>
+                        <p><i class="fa-solid fa-phone"></i> &nbsp; Call Us</p><br>
+                    <p><i class="fa-brands fa-instagram"></i> &nbsp; Instagram</p><br></h3>
+                </div>
+            </div>
+            <div class="footer-sections">
+                <p><a href="contact.html"class="section-title">Contact Us: </a></p><br>
+                <div class="section-links">
+                    <h4><p><h2>Golden Coffee shop</h2></a></p><br>
+                    <p><i class="fa-solid fa-envelope"></i><a href="mailto:sakshigore2153@gmail.com" class="about-links">goldencoffeeshop@gamil.com</a></p><br>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:9766559236" class="about-links">Tel: +91623456789</a></p></h4>
+                    
+               </div>
+            </div>   
+    
+           
+        </div>
+
+        <hr/>
+        <p style="text-align: center; color: #ff7200; margin: 0; padding: 0;">Copyright@ Coffee Shop. All Rights Reserved</p>
+
+    </footer></div>
+    <script src="https://kit.fontawesome.com/029a190c6b.js" crossorigin="anonymous"></script>
+</body>
+</html>

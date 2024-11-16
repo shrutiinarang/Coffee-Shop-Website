@@ -1,0 +1,110 @@
+*{
+   margin:0px;
+   padding: opx;
+
+}
+body{
+   margin:0px;
+   background-color: white;
+
+}
+
+
+
+
+.card-img{
+    width:300px;
+    height: 250px;
+   display: block;
+    justify-content: center;
+    border-radius: none;
+    cursor:pointer;
+    transition: 0.5s ease;
+}
+    
+.card-img:hover{
+   width: 300px;
+   height: 250px;
+padding-left:2px ; 
+  transform: scale(1.10);
+  border-radius: 5px;
+  
+
+}
+ 
+.container-heading{
+     margin:10px 0;
+     text-align: center;
+     font-size: 50px;
+     font-weight: bold;
+     color: #330d00;
+     box-shadow: 2px #330d00;
+ }
+ .card-container{
+     background-color: #eee;
+     display:flex;
+     flex-wrap: wrap;
+     justify-content:space-evenly;
+     margin: 20px 0;
+     padding:10px;
+     
+ } 
+ .copy-card{
+     width:300px;
+   
+     text-align: center;
+     padding:25px 20px;
+     margin:10px 20px;
+     background-color: white;
+     border-radius: 20px;
+     position: relative;
+     border: none;
+     height: 400px;
+     border: 2px solid #ced8d8;
+
+     
+     
+ }
+ 
+ .copy-card:hover{
+   box-shadow: 3px 5px 0px #767F7D;
+   border-radius: 20px;
+
+   
+ }
+
+ 
+ 
+ .card-title{
+     font-size: 24px;
+     font-weight:bold;
+     margin-top: 10px;
+     padding-top: 7px;
+ }
+ .card-title:hover{
+   font-size: 24px;
+   margin-top: 15px;
+ }
+
+ .team-member-card:hover{
+     width:230px;
+     border:2px solid #eee;
+     cursor: pointer;
+     text-align: center;
+     padding:28px 22px;
+     margin:10px 20px;
+     transition: 0.3s;
+ }
+ .b{
+  padding-top: 20px;
+ }
+ 
+ 
+ 
+    
+ .prise{
+   font-size: 24px;
+   margin-top: 10px;
+   font-weight: bold;
+ }
+

@@ -1,0 +1,130 @@
+   
+        body{
+            width: 100%;
+            background-image:linear-gradient(rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(https://images.healthshots.com/healthshots/en/uploads/2023/10/14150447/coffee-3.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: 100%;
+           
+            margin: 0;
+            padding: 0;
+        }
+         
+        .review
+        {
+            color: white ;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 15px;
+        }
+        
+        
+        .card
+        {  
+            width: 400px;
+            height: 200px;
+            border-radius: 20px ;
+            display: inline-block;
+            border: 2px solid #330d00;
+            margin:50px 20px ;
+            background-color: antiquewhite;
+        }
+        .img    
+        {
+            position: relative;
+            height:80px;
+            width: 80px;
+            border: 5px solid rgb(198, 83, 0);
+            border-radius: 200px;
+            margin:10px 30px;
+            
+        }
+      
+        .heading{
+            position: relative;
+            font-size: 25px;
+            padding:0px 0 0px 170px ;
+            margin-top: -75px;
+        
+        }
+        .p1
+        {
+            text-align: center;
+            font-size: large;
+            padding: 30px 10px 10px 10px;
+        }
+         .rate {
+            padding: 0 0px 0px 170px;
+         }
+         .checked{
+            color: orange;
+               }
+        .hp{
+            background-color: #ff7200;
+            height: 5px;
+            border: none;
+        }
+        
+        .post{
+            /* padding: 0px 20px; */
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            
+        }
+        .detail{
+            /* padding: 5px 30px; */
+            margin-top: 15px;
+            margin-left: 27px;
+            height: 25px;
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .msg{
+            margin-top: 15px;
+            margin-left: 20px;
+            height: 100px;
+            width: 350px;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .send{
+            width: 200px;
+            height: 30px;
+            background: #ff7200;
+            border: 2px solid #ff7200;
+            margin: 10px 165px;
+            color: black;
+            font-size: 15px;
+            border-radius: 7px;
+         }
+       
+        .send:hover{
+            
+            transition: .3s ease;
+            border: none;
+            box-shadow: 3px 3px 0  2px black;
+        }
+
+       
+        @media screen and (max-width: 764px) {
+            .rvw{
+                margin: 10px 20px;
+                display:flex ;
+                flex-direction: column;
+            }
+            .send{
+                margin: 10px 110px;
+            }
+            
+        }
+        .rvw {
+            background-color:#a97653;
+        
+        border-radius: 15px;
+       
+        }
+       
