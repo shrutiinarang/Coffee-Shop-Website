@@ -44,6 +44,6 @@ Includes secure login and signup functionality, allowing users to create account
 
 - **Responsiveness**: The website adapts seamlessly to devices of all sizes, offering a consistent experience on desktops, tablets, and mobile devices.  
 - **Visual Appeal**: Clean and modern design elements are used to reflect the elegance and warmth of a coffee shop atmosphere.  
-- **User-Centric**: Every feature is designed with the end-user in mind, ensuring intuitive navigation and efficient functionality.  
+- **User Centric**: Every feature is designed with the end-user in mind, ensuring intuitive navigation and efficient functionality.  
 
 
